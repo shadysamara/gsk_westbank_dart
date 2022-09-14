@@ -90,8 +90,20 @@ void main(List<String> arguments) {
     return MapEntry(key, convertStringToCamelCase(value));
   });
 
-  print(newMyCountryMap);
+  // print(newMyCountryMap);
+  ///////////////////
+  ///// positional parameters
+  ///// optional parameters
+  ///String, String?
+  String getMyFullName(String fName,
+      [String mName, String lName = 'undefined']) {
+    return '$fName $mName $lName';
+  }
+
+  String fullName = getMyFullName('ahmed', 'mohammed', 'ali');
+  print(fullName);
 }
+
 /*
 define 3 functions 
 1- the first function will receive string value and return camel case string value
@@ -99,5 +111,5 @@ define 3 functions
 3- the third function will recieve any map and return new map which contains the same keys 
 and camel case values
 
-
 */
+
